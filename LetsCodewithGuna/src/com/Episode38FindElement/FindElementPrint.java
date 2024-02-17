@@ -32,6 +32,24 @@ public class FindElementPrint {
 			
 		
 		}	
+		for (WebElement webElement : list) {
+			System.out.println(webElement.getText());
+			
+		}
+		
+		List<WebElement> findElements = driver.findElements(By.tagName("input"));
+		int size3 = findElements.size();
+		System.out.println(size3);
+		for (WebElement webElement : findElements) {
+			System.out.println(webElement.getAttribute("id"));
+		}
+		
+		List<WebElement> link = driver.findElements(By.tagName("a"));
+		for (WebElement links : link) {
+			System.out.println(links.getAttribute("href"));
+		}
+		
+		
 	}
 
 }
